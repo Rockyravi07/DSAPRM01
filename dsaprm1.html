@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function dfs(graph, x)
+         { let visited = {};
+          visited[x] = true; 
+          let stack = [x];
+           while (stack.length) { let node = stack.pop();
+             console.log(node);
+              let neighbours = graph[node];
+               for (let i = 0; i < neighbours.length; i++) 
+               { let neighbour = neighbours[i];
+                 if (!visited[neighbour])
+                  { visited[neighbour] = true; 
+                    stack.push(neighbour);
+                 }
+                 }
+                 }
+                 }
+    </script>
+</body>
+</html>
